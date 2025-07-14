@@ -6,7 +6,7 @@ def pripojeni_db():
         spojeni = mysql.connector.connect(
             host="localhost",
             user="root",           
-            password="K4d1budk487!",    
+            password="K4d1budk487!",
             database="TASK_MANAGER"
         )
         return spojeni
