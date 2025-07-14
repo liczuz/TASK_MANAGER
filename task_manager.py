@@ -13,6 +13,7 @@ def pripojeni_db():
     except Error as e:
         print("Chyba při připojení k databázi:", e)
         return None
+
 def vytvoreni_tabulky():
     spojeni = pripojeni_db()
     if spojeni:
@@ -29,6 +30,7 @@ def vytvoreni_tabulky():
         spojeni.commit()
         kurzor.close()
         spojeni.close()
+
 def hlavni_menu():
     vytvoreni_tabulky()
     while True:
@@ -53,6 +55,7 @@ def hlavni_menu():
             break
         else:
             print("Neplatná volba.")
+
 def pridat_ukol():
     nazev = input("Zadej název úkolu: ")
     popis = input("Zadej popis úkolu: ")
@@ -70,6 +73,7 @@ def pridat_ukol():
         print("Úkol byl úspěšně přidán.")
         kurzor.close()
         spojeni.close() 
+
 def zobrazit_ukoly():
     spojeni = pripojeni_db()
     if spojeni:
@@ -87,6 +91,7 @@ def zobrazit_ukoly():
 
         kurzor.close()
         spojeni.close()
+
 def aktualizovat_ukol():
     zobrazit_ukoly()
     id_ukolu = input("Zadej ID úkolu, který chceš aktualizovat: ")
@@ -108,6 +113,7 @@ def aktualizovat_ukol():
             print("Stav úkolu byl aktualizován.")
         kurzor.close()
         spojeni.close()
+
 def odstranit_ukol():
     zobrazit_ukoly()
     id_ukolu = input("Zadej ID úkolu ke smazání: ")
@@ -124,5 +130,6 @@ def odstranit_ukol():
             print("Úkol byl odstraněn.")
         kurzor.close()
         spojeni.close()
+
 if __name__ == "__main__":
     hlavni_menu()
