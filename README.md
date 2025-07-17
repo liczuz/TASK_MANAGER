@@ -21,6 +21,7 @@ Textove menu aplikace umoznuje:
 - Odstraneni ukolu
 - Ukonceni programu
 
+
 - Oddelena logika od vstupu/vystupu ("input()" a "print()" jsou pouzite pouze v hlavnim menu).
 - Osetreni chybnych ID a neplatnych stavu (mj. nezobrazi jiz splnene ukoly ve stavu "hotovo").
 - Funkce jsou testovatelne samostatne.
